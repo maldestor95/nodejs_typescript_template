@@ -1,7 +1,7 @@
-console.log("text")
+import {helloTest} from './hellotest'
 function print(text:string){
     console.log(text);
 
 }
 
-print('Hello World')
+print(`Hello! World is ${helloTest()}`)

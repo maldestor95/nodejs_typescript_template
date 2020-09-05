@@ -6,6 +6,6 @@ describe('First test',
   () => { 
     it('should return true', () => { 
       const result = helloTest();
-      expect(result).to.equal(true); 
+      expect(result).to.equal('wonderful'); 
   }); 
 });

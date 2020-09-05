@@ -1,1 +1,1 @@
-export const helloTest:()=>boolean=function(){ return true; } 
+export const helloTest:()=>string=function(){ return 'wonderful'; } 
