@@ -1,4 +1,4 @@
-import { helloTest } from '../src/hellotest';
+import { helloTest } from '../hellotest';
 import { expect } from 'chai';
 import 'mocha';
 

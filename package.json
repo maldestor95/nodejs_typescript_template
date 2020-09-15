@@ -7,8 +7,12 @@
         "start": "npm run build && node build/index.js",
         "lint": "eslint . --ext .ts",
         "start:dev": "nodemon",
+        "dev": "set NODE_ENV=development &nodemon",
         "build": "rimraf ./build tsconfig.tsbuildinfo && tsc",
-        "test": "mocha -r ts-node/register tests/**/*.spec.ts --colors"
+        "test": "mocha -r ts-node/register tests/**/*.spec.ts --colors",
+        "test:coverage": "nyc --reporter=text mocha -r mocha.env.js -r ts-node/register",
+        "test:dev": "mocha -r mocha.env.js -r ts-node/register --watch",
+        "test:ts": "mocha -r mocha.env.js -r ts-node/register src/**/*.spec.ts --colors"
     },
     "keywords": [],
     "author": "Ludovic Deparis",
@@ -29,7 +33,8 @@
         "nodemon": "^2.0.4",
         "rimraf": "^3.0.2",
         "ts-node": "^9.0.0",
-        "typescript": "^4.0.2"
+        "typescript": "^4.0.2",
+        "nyc": "^15.1.0"
     },
     "husky": {
         "hooks": {
